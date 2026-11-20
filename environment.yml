@@ -1,0 +1,15 @@
+# Conda environment for the SOFA force twin (Linux x86-64; also works on macOS arm64).
+#   conda env create -f environment.yml
+#   conda activate sofa-twin
+name: sofa-twin
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - sofa-python3=25.12          # SOFA framework + SofaPython3 bindings (pulls in SOFA itself)
+  - numpy
+  - scipy
+  - matplotlib
+  - pyvista                     # offscreen 3D rendering of the videos (VTK)
+  - imageio
+  - imageio-ffmpeg              # mp4 writer
